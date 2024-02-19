@@ -21,3 +21,4 @@ vim.opt.scrolloff = 8                                   -- Number of screen line
 vim.opt.signcolumn = 'no'                               -- Whether to show the signcolumn (local to window)
 vim.opt.updatetime = 50                                 -- Time in msec after which the swap file will be updated
 --vim.opt.colorcolumn = '80'                              -- Column to highlight (useful for Fortran etc)
+vim.opt.mouse = ''                                      -- Disable the mouse (Paste etc) - allows better cut & paste
