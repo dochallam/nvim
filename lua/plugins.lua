@@ -19,19 +19,28 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
 
     -- Nightfox colour scheme (https://github.com/EdenEast/nightfox.nvim)
-	{
-  		"EdenEast/nightfox.nvim",
-  		lazy = false,
-  		priority = 1000,
-  		opts = {},
-	},
+        --{
+        --      "EdenEast/nightfox.nvim",
+        --      lazy = false,
+        --      priority = 1000,
+        --      opts = {},
+        --},
 
 
-	-- Lualine status bar (https://github.com/nvim-lualine/lualine.nvim)
-	{
-    	'nvim-lualine/lualine.nvim',
-    	dependencies = { 'nvim-tree/nvim-web-devicons' }
-	},
+    -- Tokyonight colour scheme (https://github.com/folke/tokyonight.nvim)
+    {
+        "folke/tokyonight.nvim",
+        lazy = false,
+        priority = 1000,
+        opts = {},
+    },
+
+
+        -- Lualine status bar (https://github.com/nvim-lualine/lualine.nvim)
+        {
+        'nvim-lualine/lualine.nvim',
+        dependencies = { 'nvim-tree/nvim-web-devicons' }
+        },
 
 
     -- Indent visualizer (https://github.com/lukas-reineke/indent-blankline.nvim)
@@ -47,7 +56,7 @@ require("lazy").setup({
     {
         'nvim-treesitter/nvim-treesitter',
         build = ":TSUpdate",
-        config = function () 
+        config = function ()
         local configs = require("nvim-treesitter.configs")
 
         configs.setup({
@@ -55,7 +64,7 @@ require("lazy").setup({
             "markdown", "markdown_inline", "html", "terraform", "json", "yaml" },
             sync_install = false,
             highlight = { enable = true },
-            indent = { enable = true },  
+            indent = { enable = true },
             })
         end
     },
@@ -70,11 +79,11 @@ require("lazy").setup({
 
     -- LuaSnip macros (https://github.com/L3MON4D3/LuaSnip)
     {
-	    "L3MON4D3/LuaSnip",
-	    -- follow latest release.
-	    version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
-	    -- install jsregexp (optional!).
-	    build = "make install_jsregexp"
+            "L3MON4D3/LuaSnip",
+            -- follow latest release.
+            version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+            -- install jsregexp (optional!).
+            build = "make install_jsregexp"
     }
 
 })
