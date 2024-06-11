@@ -3,9 +3,9 @@
 My personal NeoVim configuration.
 
 ## Install Neovim from GitHub repository
-I've had problems with distribution package-manager installed binaries, so prefer to install
-Neovim from source. The foloowing instructions for Linux are taken
-from https://github.com/neovim/neovim/releases:
+I've had problems with distribution package manager installed binaries, so prefer to install
+Neovim from the pre-compiled binary on the Neovim Github repository.
+The following instructions for Linux are taken from https://github.com/neovim/neovim/releases:
 
 If present, uninsatll the package manager installed `nvim`. Clear out `/opt/nvim`:
 ```
@@ -16,6 +16,7 @@ Install from GitHub rrepository:
 sudo cd /opt
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
 sudo tar -zvxf nvim-linux64.tar.gz
+sudo rm nvim-linux64.tar.gz
 ```
 Add this to your shell config (`~/.bashrc`, `~/. zshrc`, ...):
 ```
