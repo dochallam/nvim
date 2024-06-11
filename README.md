@@ -2,7 +2,7 @@
 ## What is this?
 My personal NeoVim configuration.
 
-## Install Neovim from source
+## Install Neovim from GitHub repository
 I've had problems with distribution package-manager installed binaries, so prefer to install
 Neovim from source. The foloowing instructions for Linux are taken
 from https://github.com/neovim/neovim/releases:
