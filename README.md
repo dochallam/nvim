@@ -2,6 +2,26 @@
 ## What is this?
 My personal NeoVim configuration.
 
+## Install Neovim from source
+I've had problems with distribution package-manager installed binaries, so prefer to install
+Neovim from source. The foloowing instructions for Linux are taken
+from https://github.com/neovim/neovim/releases:
+
+If present, uninsatll the package manager installed `nvim`. Clear out `/opt/nvim`:
+```
+sudo rm -rf /opt/nvim
+```
+Install from GitHub rrepository:
+```
+sudo cd /opt
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
+sudo tar -zvxf nvim-linux64.tar.gz
+```
+Add this to your shell config (`~/.bashrc`, `~/. zshrc`, ...):
+```
+export PATH="$PATH:/opt/nvim-linux64/bin"
+```
+
 ## How to use
 1. If you have an existing `~/.config/nvim` directory, then you may want to back that up first.
 2. Clone this repository to directory `~/.config/nvim`.
