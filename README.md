@@ -40,6 +40,9 @@ File explorer:
 - `<leader>hx` - opens file explorer in horizontally split windows
 - `<leader>vx` - opens file explorer in vertically split windows
 
+Auto-complete:
+- Type first few characters, `<ctrl>-n` to search, then `TAB` to select from options.
+
 Search in file:
 - Usual vim `/` to search, `n` to skip forward, `N` to skip backward.
 - `<leader>c` to clear highlighted search (`n` and `N` will reactivate previous search highlights)
