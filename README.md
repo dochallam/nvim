@@ -33,6 +33,7 @@ export PATH="$PATH:/opt/nvim-linux64/bin"
 Tabs etc are also defined in this file.
 
 ## Telescope fuzzy search
+https://github.com/nvim-telescope/telescope.nvim
 - `<leader>ff` - find files
 - `<leader>fg` - find grep (strings within files)
 - `<leader>fb` - find buffer
