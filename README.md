@@ -11,7 +11,7 @@ If present, uninsatll the package manager installed `nvim`. Clear out `/opt/nvim
 ```
 sudo rm -rf /opt/nvim
 ```
-Install from GitHub rrepository:
+Install from GitHub repository:
 ```
 sudo cd /opt
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
@@ -31,6 +31,12 @@ export PATH="$PATH:/opt/nvim-linux64/bin"
 `<leader>` key defined in `./lua/options.lua` as `<space>`.
 
 Tabs etc are also defined in this file.
+
+## Telescope fuzzy search
+- `<leader>ff` - find files
+- `<leader>fg` - find grep (strings within files)
+- `<leader>fb` - find buffer
+- `<leader>fh` - find help
 
 ## Vim key mappings
 Defined in `lua/keymaps.lua`
