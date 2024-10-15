@@ -64,9 +64,9 @@ return {
         },
         fmta(
             [[
-                \begin{align}
+                \begin{align*}
                     <>
-                \end{align}
+                \end{align*}
             ]],
             { i(1) }
         )
