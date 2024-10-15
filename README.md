@@ -2,6 +2,27 @@
 ## What is this?
 My personal NeoVim configuration.
 
+## Install Neovim from GitHub repository
+I've had problems with distribution package manager installed binaries, so prefer to install
+Neovim from the pre-compiled binary on the Neovim Github repository.
+The following instructions for Linux are taken from https://github.com/neovim/neovim/releases:
+
+If present, uninsatll the package manager installed `nvim`. Clear out `/opt/nvim`:
+```
+sudo rm -rf /opt/nvim
+```
+Install from GitHub repository:
+```
+sudo cd /opt
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
+sudo tar -zvxf nvim-linux64.tar.gz
+sudo rm nvim-linux64.tar.gz
+```
+Add this to your shell config (`~/.bashrc`, `~/. zshrc`, ...):
+```
+export PATH="$PATH:/opt/nvim-linux64/bin"
+```
+
 ## How to use
 1. If you have an existing `~/.config/nvim` directory, then you may want to back that up first.
 2. Clone this repository to directory `~/.config/nvim`.
@@ -11,6 +32,13 @@ My personal NeoVim configuration.
 
 Tabs etc are also defined in this file.
 
+## Telescope fuzzy search
+https://github.com/nvim-telescope/telescope.nvim
+- `<leader>ff` - find files
+- `<leader>fg` - find grep (strings within files)
+- `<leader>fb` - find buffer
+- `<leader>fh` - find help
+
 ## Vim key mappings
 Defined in `lua/keymaps.lua`
 
@@ -18,6 +46,9 @@ File explorer:
 - `<leader>ex` - opens file explorer in the current window
 - `<leader>hx` - opens file explorer in horizontally split windows
 - `<leader>vx` - opens file explorer in vertically split windows
+
+Auto-complete:
+- Type first few characters, `<ctrl>-n` to search, then `TAB` to select from options.
 
 Search in file:
 - Usual vim `/` to search, `n` to skip forward, `N` to skip backward.

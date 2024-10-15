@@ -2,7 +2,8 @@ require('lualine').setup {
   options = {
     --icons_enabled = true,
     icons_enabled = false,
-    theme = 'auto',
+    --theme = 'auto',
+    theme = 'tokyonight',
     component_separators = { left = '', right = ''},
     section_separators = { left = '', right = ''},
     disabled_filetypes = {
@@ -20,11 +21,24 @@ require('lualine').setup {
   },
   sections = {
     lualine_a = {'mode'},
-    lualine_b = {'branch', 'diff', 'diagnostics'},
+    --lualine_b = {'branch', 'diff', 'diagnostics'},
+    lualine_b = {
+        {'branch', color = {fg = '#000000'}},
+        {'diff',
+            diff_color = {
+                added = {fg = '#000000'},
+                modified = {fg = '#000000'},
+                removed = { fg = '#000000'}
+            }
+        },
+        {'diagnostics', color = {fg = '#000000'}}
+    },
     lualine_c = {'filename'},
     --lualine_x = {'encoding', 'fileformat', 'filetype'},
     lualine_x = {'encoding', 'filetype'},
-    lualine_y = {'progress'},
+    lualine_y = {
+        {'progress', color = {fg = '#000000'}}
+    },
     lualine_z = {'location'}
   },
   inactive_sections = {
