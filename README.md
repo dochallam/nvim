@@ -28,13 +28,25 @@ export PATH="$PATH:/opt/nvim-linux64/bin"
 2. Clone this repository to directory `~/.config/nvim`.
 
 ## Install packages
+Install some packages and run additional commands for things like `node`, `ruby`, and `perl`:
 ```
-sudo dnf install gcc make
-sudo dnf install luarocks
+sudo dnf install gcc make clang
 sudo dnf install ripgrep
 sudo dnf install fd-find
+
+sudo dnf install luarocks
+sudo luarocks install jsregexp
+
 sudo dnf install nodejs
-sudo dnf install python3 neovim
+sudo npm install -g neovim
+
+sudo dnf install python3-neovim
+
+sudo dnf install ruby ruby-devel
+sudo gem install neovim
+
+sudo install perl-App-cpanminus
+sudo cpanm -n Neovim::Ext
 ```
 
 ## Install `FiraCode` Nerd font
