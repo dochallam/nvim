@@ -45,6 +45,7 @@ sudo dnf install python3-neovim
 sudo dnf install ruby ruby-devel
 sudo gem install neovim
 
+sudo install cpanm
 sudo install perl-App-cpanminus
 sudo cpanm -n Neovim::Ext
 ```
