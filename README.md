@@ -58,7 +58,7 @@ Window splitting:
 - `<alt>v` - vertical split with blank buffer
 - `<alt>h` - horizontal split with blank buffer
 - `<ctrl>v` - vertical split with copy of current buffer
-- `<ctrl>h` - horizontal split with copy of current blank buffer
+- `<ctrl>h` - horizontal split with copy of current buffer
 - Move between windows with `<ctrl>-w` then the usual `hjkl` keys
 
 ## Plugins
