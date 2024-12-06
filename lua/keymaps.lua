@@ -20,6 +20,10 @@ vim.keymap.set("n", "<C-k>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
--- window splitting
-vim.keymap.set("n", "<A-h>", ":split<CR>")
-vim.keymap.set("n", "<A-v>", ":vsplit<CR>")
+-- window split with copy of current buffer
+vim.keymap.set("n", "<C-h>", ":split<CR>")
+vim.keymap.set("n", "<C-v>", ":vsplit<CR>")
+
+-- window split with empty buffer
+vim.keymap.set("n", "<A-h>", ":new<CR>")
+vim.keymap.set("n", "<A-v>", ":vnew<CR>")

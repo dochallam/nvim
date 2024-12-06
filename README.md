@@ -11,7 +11,7 @@ If present, uninsatll the package manager installed `nvim`. Clear out `/opt/nvim
 ```
 sudo rm -rf /opt/nvim
 ```
-Install neovim from GitHub repository:
+Install from GitHub repository:
 ```
 sudo cd /opt
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
@@ -23,65 +23,10 @@ Add this to your shell config (`~/.bashrc`, `~/. zshrc`, ...):
 export PATH="$PATH:/opt/nvim-linux64/bin"
 ```
 
-## Install neovim configuration
+## How to use
 1. If you have an existing `~/.config/nvim` directory, then you may want to back that up first.
 2. Clone this repository to directory `~/.config/nvim`.
 
-## Install packages
-Install some packages and run additional commands for things like `node`, `ruby`, and `perl`:
-```
-sudo dnf install gcc make clang
-sudo dnf install ripgrep
-sudo dnf install fd-find
-
-sudo dnf install luarocks
-sudo luarocks install jsregexp
-
-sudo dnf install nodejs
-sudo npm install -g neovim
-
-sudo dnf install python3-neovim
-
-sudo dnf install ruby ruby-devel
-sudo gem install neovim
-
-sudo install cpanm
-sudo install perl-App-cpanminus
-sudo cpanm -n Neovim::Ext
-```
-
-## Install `FiraCode` Nerd font
-See https://docs.fedoraproject.org/en-US/quick-docs/fonts/ for more information.
-
-If the font is available as a package in the default OS repositories, then use that. For Fedora we install the `fira-code-fonts` package:
-```
-sudo dnf install fira-code-fonts
-```
-
-If there isn't a package, then install manually as follows.
-
-Create a font directory, download the font into it:
-```
-sudo mkdir -p /usr/local/share/fonts/FiraCode
-sudo cd /usr/local/share/fonts/FiraCode
-sudo curl -L https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/FiraCode.zip --output FiraCode.zip
-sudo unzip FiraCode.zip
-```
-
-Set permissions and SELinux context:
-```
-sudo chown -R root: /usr/local/share/fonts/FiraCode
-sudo chmod 644 /usr/local/share/fonts/FiraCode/*
-sudo restorecon -vFr /usr/local/share/fonts/FiraCode
-```
-
-Update the font cache:
-```
-sudo fc-cache -v
-```
-
-
-# Usage
 ## Options
 `<leader>` key defined in `./lua/options.lua` as `<space>`.
 
@@ -110,8 +55,10 @@ Search in file:
 - `<leader>c` to clear highlighted search (`n` and `N` will reactivate previous search highlights)
 
 Window splitting:
-- `<alt>v` - vertical split
-- `<alt>h` - horizontal split
+- `<alt>v` - vertical split with blank buffer
+- `<alt>h` - horizontal split with blank buffer
+- `<ctrl>v` - vertical split with copy of current buffer
+- `<ctrl>h` - horizontal split with copy of current blank buffer
 - Move between windows with `<ctrl>-w` then the usual `hjkl` keys
 
 ## Plugins
