@@ -6,6 +6,10 @@ vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 
 require('telescope').setup({
   defaults = {
+    -- Do not use Treesitter highlighting - there's a version clash
+    preview = {
+      treesitter = false,
+    },
     -- configure to use ripgrep
     vimgrep_arguments = {
       "rg",
@@ -20,7 +24,6 @@ require('telescope').setup({
       -- Exclude some patterns from search
       "--glob=!**/.git/*",
     },
-
   },
   pickers = {
     find_files = {
