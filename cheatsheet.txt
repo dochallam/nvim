@@ -1,0 +1,52 @@
+Vim general commands
+====================
+Visual mode:
+	v			start visual mode - mark lines - command
+	V			linewise visual mode
+	<ctrl> v	start visual block mode
+	<esc>		exit visual mode
+
+Vim key mappings (~/.config/nvim/lua/keymaps.lua)
+=================================================
+<leader> key is <space> (~/.config/nvim/lua/options.lua)
+
+netrw file explorer:
+	<leader> ex - in current buffer
+	<leader> hx - in new horizontal split
+	<leader> vx - in new vertical split
+
+J				move selection down in visual mode
+K				move selection up in visual mode
+
+<ctrl> j		move half page down keeping cursor centered
+<ctrl> k		move half page up keeping cursor centered
+
+<alt> h			new empty horizontal buffer
+<alt> v			new empty vertical buffer
+
+<ctrl> h		copy of current buffer in new horizontal buffer
+<ctrl> v		copy of current buffer in new vertical buffer
+
+<ctrl> w +hjkl	move between buffers
+
+Vim searching:
+/				start search (enter string)
+n				next match
+N				previous match
+<leader> c		clear highlighted matches (n and N will re-highlight last search)
+
+Telescope
+=========
+<leader> ff		find files
+<leader> fg		find grep (find strings within files)
+<leader> fb		find buffer 
+<leader> fh		find help 
+
+LuaSnip (snippets in files under ~/.config/nvim/luasnip)
+========================================================
+luasnip/all.lua contains snippets that work for all languages
+luasnip/<lang> directories contain snippets for language <;ang>
+
+<tab> 			expand snippet
+<ctrl> f		jump forward through snippet tab stops in insert and visual mode
+<shift> <tab>	jump backwards through snippet tab stops
